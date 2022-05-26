@@ -1,0 +1,12 @@
+{
+  "//appId": "Get your own App ID at https://dashboard.agora.io/",
+  "appId": "ee37ce52515f4b28b921e4bc66c150c3",
+  "//token": "Please refer to https://docs.agora.io/en/Agora%20Platform/token",
+  "token": "006ee37ce52515f4b28b921e4bc66c150c3IACxImRdQrnpVZAHjqeAkD8E6hqcoIRUKhejjeA1QN7iumdrvLsAAAAAEAAPZcnSfz+QYgEAAQB/P5Bi",
+  "//appCertificate": "Get your own App Certificate at https://dashboard.agora.io/",
+  "appCertificate": "989856fcdc84458eb05ce5cd6fc915ee",
+  "//uid": "Your int user ID",
+  "uid": 0,
+  "//stringUid": "Your string user ID",
+  "stringUid": "0"
+}
