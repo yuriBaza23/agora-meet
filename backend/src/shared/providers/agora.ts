@@ -1,11 +1,10 @@
-import {uuid} from 'uuidv4';
-const {RtcTokenBuilder, RtcRole} = require('agora-access-token');
-const agoraConfig = require('./agora.json');
+import {v4 as uuidv4} from 'uuid';
+import {RtcTokenBuilder, RtcRole} from 'agora-access-token';
+import agoraConfig from '../../../../app/src/configs/agora.json';
 
 const appID = agoraConfig.appId;
 const appCertificate = agoraConfig.appCertificate;
 const role = RtcRole.PUBLISHER;
-//const account = '2882341273';
 
 const expirationTimeInSeconds = 3600;
 
@@ -20,10 +19,10 @@ function getRandomInt(min: number, max: number) {
 }
 
 export function simulateChannelName() {
-  return uuid();
+  return uuidv4();
 }
 
-export async function buildTokenWithUid(channelName: string) {
+export function buildTokenWithUid(channelName: string) {
   let uid = getRandomInt(10000000, 99999999);
   const tokenA = RtcTokenBuilder.buildTokenWithUid(
     appID,
@@ -33,8 +32,7 @@ export async function buildTokenWithUid(channelName: string) {
     role,
     privilegeExpiredTs,
   );
-  console.log('Token With Integer Number Uid: ' + tokenA);
-  return tokenA;
+  return {token: tokenA, uid};
 }
 
 // Build token with user account
