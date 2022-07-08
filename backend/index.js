@@ -255,4 +255,4 @@ app.post("/meet/addParticipants/:channelName/:me", async (req, res) => {
   return res.status(201).json();
 });
 
-app.listen(3333, () => console.log("Okay, tudo certo na 3333"));
+app.listen(3333, () => console.log("Okay, tudo certo na 3333!"));
