@@ -65,3 +65,5 @@ app/vendor/bundle/
 
 # Agora configuration
 /configs/agora.json
+
+/backend/.env.local
